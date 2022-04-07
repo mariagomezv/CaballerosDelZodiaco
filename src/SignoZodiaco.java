@@ -35,7 +35,7 @@ public class SignoZodiaco
                 {
                     System.out.println("Tu eres Acuario");
                 }
-                else if(diaN >= 20 && diaN <= 29)
+                else if(diaN >= 20 && diaN <= 28)
                 {
                     System.out.println("Tu eres piscis");
                 }
@@ -64,6 +64,10 @@ public class SignoZodiaco
                 else if(diaN >=21 && diaN <= 30){
                     System.out.println("Tu eres Tauro");
                 }
+                else
+                {
+                    System.out.println("Eres un Dios naciste un dia que no existe!");
+                }
                 break;  
                 //Mayo
                 case(5):
@@ -84,6 +88,10 @@ public class SignoZodiaco
                 }
                 else if(diaN >=22 && diaN <= 30){
                     System.out.println("Tu eres Cancer");
+                }
+                else
+                {
+                    System.out.println("Eres un Dios naciste un dia que no existe!");
                 }
                 break; 
                 //Julio
@@ -118,6 +126,10 @@ public class SignoZodiaco
                 {
                     System.out.println("Tu eres Libra");
                 }
+                else
+                {
+                    System.out.println("Eres un Dios naciste un dia que no existe!");
+                }
                 break; 
                 //Octubre
                 case(10):
@@ -139,6 +151,10 @@ public class SignoZodiaco
                 else if(diaN >=23 && diaN <= 30)
                 {
                     System.out.println("Tu eres Sagitario");
+                }
+                else
+                {
+                    System.out.println("Eres un Dios naciste un dia que no existe!");
                 }
                 break; 
                 //Diciembre
