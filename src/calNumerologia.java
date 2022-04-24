@@ -1,5 +1,9 @@
 public class calNumerologia{
-	public void calNumerologia() {
+    private int diaN;
+    private int resultado = 0;
+    private int resultado2 = 0;
+
+	public void calNumerologia1() {
         while (diaN > 0) {
             resultado += diaN % 10;
             diaN = diaN / 10;
