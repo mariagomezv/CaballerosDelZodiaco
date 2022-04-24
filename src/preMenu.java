@@ -330,7 +330,8 @@ public class preMenu {
             sleeper();
         }
     }
-    
+
+
     // calcula la cantidad de dias vividos
     public void diasSufridos() {
         LocalDate diaNacimiento = LocalDate.of(anioN, mesN, diaN);
@@ -341,6 +342,33 @@ public class preMenu {
             Thread.sleep(3 * 1000);
         } catch (Exception e) {
             System.out.println(e);
+        }
+        sleeper();
+    }
+
+    // calcula los años de perro
+    public void aniosPerro() {
+        LocalDate diaNaci = LocalDate.of(anioN, mesN, diaN);
+        LocalDate fechaAct = LocalDate.now();
+        diasConver = ChronoUnit.DAYS.between(diaNaci, fechaAct);
+        System.out.println((diasConver / 365) / 7);
+        sleeper();
+    }
+    
+    // calcula la suerte
+    public void calNumerologia() {
+        while (diaN > 0) {
+            resultado += diaN % 10;
+            diaN = diaN / 10;
+        }
+        if (resultado > 10) {
+            while (resultado > 0) {
+                resultado2 += resultado % 10;
+                resultado = resultado / 10;
+            }
+            System.out.println("Tu numero de la suerte es: " + resultado2);
+        } else {
+            System.out.println("Tu numero de la suerte es:" + resultado);
         }
         sleeper();
     }
