@@ -47,6 +47,45 @@ public class preMenu {
         preMenu.mesN = mesN;
         preMenu.anioN = anioN;
     }
+//____________________________________________________________________________________________________
+//____________________________________________________________________________________________________
+
+    // Metodos
+
+    // sleeper hace que el programa se tarde 3 segundos para que se siga ejecutando
+    public void sleeper() {
+        try {
+            Thread.sleep(3 * 1000);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+    // menuMain es el menu principal que se muestra en consola
+    public void menuMain() {
+        System.out.println("");
+        System.out.println(ANSI_RESET + "");
+
+        System.out.println(
+                "//////////////////////////////////////////////////////////////////////////////////////////////");
+        System.out.println(ANSI_PURPLE + "|-----------------------------------------|");
+        System.out.println("|  Escoge una de las siguientes opciones  |");
+        System.out.println("|-----------------------------------------|" + ANSI_RESET);
+        System.out.println("-----------------------------------------------------------------------");
+        System.out.println("1. Si quieres calcular tu signo del zodiaco de forma exacta");
+        System.out.println("");
+        System.out.println("2. Si quieres saber cuantos dias has vivido en toda tu existencia");
+        System.out.println("");
+        System.out.println("3. Si quieres saber cuantos años tendrias si fueras un perro");
+        System.out.println("");
+        System.out.println("4. Si quieres saber tu numerologia");
+        System.out.println("");
+        System.out.println("5. Si quieres salir :(");
+        System.out.println("-----------------------------------------------------------------------");
+        int eleccion = scanner.nextInt();
+        setEleccion(eleccion);
+    }
+    
 
 
     // Getters Y Setters
