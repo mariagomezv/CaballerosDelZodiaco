@@ -331,6 +331,20 @@ public class preMenu {
         }
     }
     
+    // calcula la cantidad de dias vividos
+    public void diasSufridos() {
+        LocalDate diaNacimiento = LocalDate.of(anioN, mesN, diaN);
+        LocalDate fechaActual = LocalDate.now();
+        diasTotal = ChronoUnit.DAYS.between(diaNacimiento, fechaActual);
+        System.out.println("Tu numero de dias Vividos es " + diasTotal);
+        try {
+            Thread.sleep(3 * 1000);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        sleeper();
+    }
+
 
     // Getters Y Setters
     public static int getEleccion() {
