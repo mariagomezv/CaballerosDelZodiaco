@@ -131,6 +131,206 @@ public class preMenu {
         setAnioN(anio);
     }
 
+    // repetir hace que el progrma se vuelva a ejecutar o se termine
+    public void repetir() {
+        System.out.println("-----------------------------------------------------------------------");
+        System.out.println("-----------------------------------------------------------------------");
+        System.out.println("");
+        System.out.println("Deseas volver al menu");
+        System.out.println("-----------------------------------------------------------------------");
+        System.out.println("1. Si");
+        System.out.println("2. No salir");
+        int eleccion2 = scanner.nextInt();
+        if (eleccion2 == 1) {
+            menuMain();
+            setear();
+            eleccion();
+        } else if (eleccion2 == 2) {
+            System.out.println("**********************************");
+            System.out.println("| Te extrañaremos, Vuelve Pronto |");
+            System.out.println("**********************************");
+        }
+    }
+
+    // calcula dia zodiaco
+    public void calculaTuZodiaco() {
+        if (diaN > 31 || diaN < 1) {
+            System.out.println("Te saliste del rango, eres un malnacido :( ");
+        } else if (mesN > 12 || mesN < 1) {
+            System.out.println("Te saliste del rango");
+        } else {
+            switch (mesN) {
+                // Enero
+                case (1):
+                    if (diaN >= 1 && diaN <= 20) {
+                        System.out.println("_______________________");
+                        System.out.println("| Tu eres Capricornio |");
+                        System.out.println("|_____________________|");
+                    } else if (diaN >= 21 && diaN <= 31) {
+                        System.out.println("_______________________");
+                        System.out.println("| Tu signo es Acuario |");
+                        System.out.println("|_____________________|");
+                    }
+                    break;
+                // Febrero
+                case (2):
+                    if (diaN >= 1 && diaN <= 19) {
+                        System.out.println("___________________");
+                        System.out.println("| Tu eres Acuario |");
+                        System.out.println("|_________________|");
+
+                    } else if (diaN >= 20 && diaN <= 28) {
+                        System.out.println("__________________");
+                        System.out.println("| Tu eres piscis |");
+                        System.out.println("|________________|");
+
+                    } else {
+                        System.out.println("______________________________________________");
+                        System.out.println("| Eres un Dios naciste un dia que no existe! |");
+                        System.out.println("|____________________________________________|");
+                    }
+                    break;
+                // Marzo
+                case (3):
+                    if (diaN >= 1 && diaN <= 20) {
+                        System.out.println("_________________");
+                        System.out.println("| Tu eres Piscis |");
+                        System.out.println("|________________|");
+                    } else if (diaN >= 21 && diaN <= 31) {
+                        System.out.println("_________________");
+                        System.out.println("| Tu eres Aries |");
+                        System.out.println("|_______________|");
+                    }
+                    break;
+                // Abril
+                case (4):
+                    if (diaN >= 1 && diaN <= 20) {
+                        System.out.println("_________________");
+                        System.out.println("| Tu eres Aries |");
+                        System.out.println("|_______________|");
+                    } else if (diaN >= 21 && diaN <= 30) {
+                        System.out.println("_________________");
+                        System.out.println("| Tu eres Tauro |");
+                        System.out.println("|_______________|");
+                    } else {
+                        System.out.println("______________________________________________");
+                        System.out.println("| Eres un Dios naciste un dia que no existe! |");
+                        System.out.println("|____________________________________________|");
+                    }
+                    break;
+                // Mayo
+                case (5):
+                    if (diaN >= 1 && diaN <= 21) {
+                        System.out.println("_________________");
+                        System.out.println("| Tu eres Tauro |");
+                        System.out.println("|_______________|");
+                    } else if (diaN >= 22 && diaN <= 31) {
+                        System.out.println("___________________");
+                        System.out.println("| Tu eres Geminis |");
+                        System.out.println("|_________________|");
+                    }
+                    break;
+                // Junio
+                case (6):
+                    if (diaN >= 1 && diaN <= 21) {
+                        System.out.println("___________________");
+                        System.out.println("| Tu eres Geminis |");
+                        System.out.println("|_________________|");
+                    } else if (diaN >= 22 && diaN <= 30) {
+                        System.out.println("__________________");
+                        System.out.println("| Tu eres Cancer |");
+                        System.out.println("|________________|");
+                    } else {
+                        System.out.println("______________________________________________");
+                        System.out.println("| Eres un Dios naciste un dia que no existe! |");
+                        System.out.println("|____________________________________________|");
+                    }
+                    break;
+                // Julio
+                case (7):
+                    if (diaN >= 1 && diaN <= 22) {
+                        System.out.println("__________________");
+                        System.out.println("| Tu eres Cancer |");
+                        System.out.println("|________________|");
+                    } else if (diaN >= 23 && diaN <= 31) {
+                        System.out.println("_______________");
+                        System.out.println("| Tu eres Leo |");
+                        System.out.println("|_____________|");
+                    }
+                    break;
+                // Agosto
+                case (8):
+                    if (diaN >= 1 && diaN <= 23) {
+                        System.out.println("_______________");
+                        System.out.println("| Tu eres Leo |");
+                        System.out.println("|_____________|");
+                    } else if (diaN >= 24 && diaN <= 31) {
+                        System.out.println("_________________");
+                        System.out.println("| Tu eres Virgo |");
+                        System.out.println("|_______________|");
+                    }
+                    break;
+                // Septiembre
+                case (9):
+                    if (diaN >= 1 && diaN <= 23) {
+                        System.out.println("_________________");
+                        System.out.println("| Tu eres Virgo |");
+                        System.out.println("|_______________|");
+                    } else if (diaN >= 24 && diaN <= 30) {
+                        System.out.println("_________________");
+                        System.out.println("| Tu eres Libra |");
+                        System.out.println("|_______________|");
+                    } else {
+                        System.out.println("______________________________________________");
+                        System.out.println("| Eres un Dios naciste un dia que no existe! |");
+                        System.out.println("|____________________________________________|");
+                    }
+                    break;
+                // Octubre
+                case (10):
+                    if (diaN >= 1 && diaN <= 23) {
+                        System.out.println("_________________");
+                        System.out.println("| Tu eres Libra |");
+                        System.out.println("|_______________|");
+                    } else if (diaN >= 24 && diaN <= 31) {
+                        System.out.println("____________________");
+                        System.out.println("| Tu eres Escorpio |");
+                        System.out.println("|__________________|");
+                    }
+                    break;
+                // Noviembre
+                case (11):
+                    if (diaN >= 1 && diaN <= 22) {
+                        System.out.println("____________________");
+                        System.out.println("| Tu eres Escorpio |");
+                        System.out.println("|__________________|");
+                    } else if (diaN >= 23 && diaN <= 30) {
+                        System.out.println("_____________________");
+                        System.out.println("| Tu eres Sagitario |");
+                        System.out.println("|___________________|");
+                    } else {
+                        System.out.println("______________________________________________");
+                        System.out.println("| Eres un Dios naciste un dia que no existe! |");
+                        System.out.println("|____________________________________________|");
+                    }
+                    break;
+                // Diciembre
+                case (12):
+                    if (diaN >= 1 && diaN <= 21) {
+                        System.out.println("_____________________");
+                        System.out.println("| Tu eres Sagitario |");
+                        System.out.println("|___________________|");
+                    } else if (diaN >= 22 && diaN <= 31) {
+                        System.out.println("_______________________");
+                        System.out.println("| Tu eres Capricornio |");
+                        System.out.println("|_____________________|");
+                    }
+                    break;
+            }
+            sleeper();
+        }
+    }
+    
 
     // Getters Y Setters
     public static int getEleccion() {
