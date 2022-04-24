@@ -85,7 +85,51 @@ public class preMenu {
         int eleccion = scanner.nextInt();
         setEleccion(eleccion);
     }
-    
+
+    // eleccion Toma la eleccion del usuario
+    public void eleccion() {
+        switch (eleccion) {
+            case 1:
+                preMenu calcular = new preMenu(getDiaN(), getMesN());
+                calcular.calculaTuZodiaco();
+                break;
+            case 2:
+                preMenu diasViv = new preMenu(getDiaN(), getMesN(), getAnioN());
+                diasViv.diasSufridos();
+                break;
+            case 3:
+                preMenu diasConver = new preMenu(getDiaN(), getMesN(), getAnioN());
+                diasConver.aniosPerro();
+                break;
+            case 4:
+                preMenu numolo = new preMenu(getDiaN(), getMesN());
+                numolo.calNumerologia();
+                break;
+            case 5:
+                System.out.println("Te extrañaremos, esperamos verte pronto");
+                System.exit(0);
+        }
+        preMenu repetir = new preMenu();
+        repetir.repetir();
+    }
+
+    // setea la fecha de nacimiento
+    public void setear() {
+        System.out.println("▀▄▀▄▀▄ Ahora danos tu fecha de nacimeinto en numeros por favor ▄▀▄▀▄▀");
+        System.out.println("");
+        System.out.println("Digite su dia de nacimiento");
+        int dia = scanner.nextInt();
+        System.out.println("");
+        System.out.println("Digite su mes de nacimiento");
+        int mes = scanner.nextInt();
+        System.out.println("");
+        System.out.println("Digite su año de nacimiento");
+        int anio = scanner.nextInt();
+        System.out.println("");
+        setDiaN(dia);
+        setMesN(mes);
+        setAnioN(anio);
+    }
 
 
     // Getters Y Setters
