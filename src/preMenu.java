@@ -2,7 +2,7 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.Scanner;
 
-public class preMenu {
+public class PreMenu {
 
     // Variables
     Scanner scanner = new Scanner(System.in);
@@ -27,25 +27,25 @@ public class preMenu {
     public static final String ANSI_WHITE = "\u001B[37m";
 
     // Constructores
-    public preMenu() {
+    public PreMenu() {
     }
 
-    public preMenu(int diaN, int mesN, int anioN, long diasTotal) {
-        preMenu.diaN = diaN;
-        preMenu.mesN = mesN;
-        preMenu.anioN = anioN;
+    public PreMenu(int diaN, int mesN, int anioN, long diasTotal) {
+        PreMenu.diaN = diaN;
+        PreMenu.mesN = mesN;
+        PreMenu.anioN = anioN;
         this.diasTotal = diasTotal;
     }
 
-    public preMenu(int diaN, int mesN) {
-        preMenu.diaN = diaN;
-        preMenu.mesN = mesN;
+    public PreMenu(int diaN, int mesN) {
+        PreMenu.diaN = diaN;
+        PreMenu.mesN = mesN;
     }
 
-    public preMenu(int diaN, int mesN, int anioN) {
-        preMenu.diaN = diaN;
-        preMenu.mesN = mesN;
-        preMenu.anioN = anioN;
+    public PreMenu(int diaN, int mesN, int anioN) {
+        PreMenu.diaN = diaN;
+        PreMenu.mesN = mesN;
+        PreMenu.anioN = anioN;
     }
 //____________________________________________________________________________________________________
 //____________________________________________________________________________________________________
@@ -90,26 +90,26 @@ public class preMenu {
     public void eleccion() {
         switch (eleccion) {
             case 1:
-                preMenu calcular = new preMenu(getDiaN(), getMesN());
+                PreMenu calcular = new PreMenu(getDiaN(), getMesN());
                 calcular.calculaTuZodiaco();
                 break;
             case 2:
-                preMenu diasViv = new preMenu(getDiaN(), getMesN(), getAnioN());
+                PreMenu diasViv = new PreMenu(getDiaN(), getMesN(), getAnioN());
                 diasViv.diasSufridos();
                 break;
             case 3:
-                preMenu diasConver = new preMenu(getDiaN(), getMesN(), getAnioN());
+                PreMenu diasConver = new PreMenu(getDiaN(), getMesN(), getAnioN());
                 diasConver.aniosPerro();
                 break;
             case 4:
-                preMenu numolo = new preMenu(getDiaN(), getMesN());
+                PreMenu numolo = new PreMenu(getDiaN(), getMesN());
                 numolo.calNumerologia();
                 break;
             case 5:
                 System.out.println("Te extrañaremos, esperamos verte pronto");
                 System.exit(0);
         }
-        preMenu repetir = new preMenu();
+        PreMenu repetir = new PreMenu();
         repetir.repetir();
     }
 
@@ -351,7 +351,8 @@ public class preMenu {
         LocalDate diaNaci = LocalDate.of(anioN, mesN, diaN);
         LocalDate fechaAct = LocalDate.now();
         diasConver = ChronoUnit.DAYS.between(diaNaci, fechaAct);
-        System.out.println((diasConver / 365) / 7);
+        float diasFinal = diasConver;
+        System.out.println((diasFinal / 365) / 7);
         sleeper();
     }
     
@@ -380,7 +381,7 @@ public class preMenu {
     }
 
     public void setEleccion(int eleccion) {
-        preMenu.eleccion = eleccion;
+        PreMenu.eleccion = eleccion;
     }
 
     public static int getDiaN() {
@@ -388,7 +389,7 @@ public class preMenu {
     }
 
     public void setDiaN(int diaN) {
-        preMenu.diaN = diaN;
+        PreMenu.diaN = diaN;
     }
 
     public static int getMesN() {
@@ -396,7 +397,7 @@ public class preMenu {
     }
 
     public void setMesN(int mesN) {
-        preMenu.mesN = mesN;
+        PreMenu.mesN = mesN;
     }
 
     public int getAnioN() {
@@ -404,7 +405,7 @@ public class preMenu {
     }
 
     public void setAnioN(int anioN) {
-        preMenu.anioN = anioN;
+        PreMenu.anioN = anioN;
     }
 
     public long getDiasTotal() {

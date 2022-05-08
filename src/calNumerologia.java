@@ -1,4 +1,4 @@
-public class calNumerologia{
+public class CalNumerologia{
     private int diaN;
     private int resultado = 0;
     private int resultado2 = 0;

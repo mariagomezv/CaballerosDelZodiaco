@@ -1,12 +1,12 @@
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
-public class diasSufridos {
+public class DiasSufridos {
 
     private int diaN;
     private int mesN;
     private int anioN;
 
-    public diasSufridos() {
+    public void calDiasSufridos() {
         /*Scanner scanner = new Scanner(System.in);
         System.out.println("Digite su dia de nacimiento");
         int diaN = scanner.nextInt();

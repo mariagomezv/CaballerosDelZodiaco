@@ -2,12 +2,12 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.Scanner;
 
-public class menu extends preMenu {
+public class Menu extends PreMenu {
     public static void main(String args[]) throws Exception {
 
         // This is the tittle
         System.out.println(ANSI_GREEN+"");
-        InputStream ins = new FileInputStream( "titulo.txt" );
+        InputStream ins = new FileInputStream( "src/titulo.txt" );
         Scanner scanner2 = new Scanner(ins);
         while (scanner2.hasNextLine())
             System.out.println(scanner2.nextLine());
@@ -15,12 +15,12 @@ public class menu extends preMenu {
         System.out.println(ANSI_RESET);
         
         //Here start the menu
-        preMenu principal = new preMenu();
+        PreMenu principal = new PreMenu();
         principal.menuMain();
         if (getEleccion() >= 1 && getEleccion() <= 4) {
-            var setear = new preMenu();
+            var setear = new PreMenu();
             setear.setear();
-            preMenu elec = new preMenu();
+            PreMenu elec = new PreMenu();
             elec.eleccion();
         } else if (getEleccion() == 5) {
             System.out.println("Te extrañaremos, esperamos verte pronto");

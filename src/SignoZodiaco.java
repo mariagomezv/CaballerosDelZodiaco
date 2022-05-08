@@ -1,13 +1,13 @@
 import java.util.Scanner;
 public class SignoZodiaco
 {
-    public static void main(String[] args) {
+    public void signoZodiaco() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Digite su dia de nacimiento");
         int diaN = scanner.nextInt();
         System.out.println("Digite su mes de nacimiento");
         int mesN = scanner.nextInt();
-        
+        scanner.close();
         if(diaN >31 || diaN <1)
         {
             System.out.println("Te saliste del rango, eres un malnacido :(");
@@ -167,8 +167,7 @@ public class SignoZodiaco
                 {
                     System.out.println("Tu eres Capricornio");
                 }
-                break; 
-        
+                break;
             }
         }
     }
